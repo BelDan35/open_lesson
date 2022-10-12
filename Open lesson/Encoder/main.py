@@ -3,6 +3,7 @@ from tkinter import ttk
 from itertools import cycle
 import functions as f
 
+# Параметры экрана
 window = tk.Tk()
 window.title('DEncoder')
 #window.iconbitmap(default='etsyicon.ico')
@@ -16,14 +17,17 @@ frame_choices.grid()
 frame_input_output.grid()
 frame_copyright.grid()
 
+# Набор данных для выбора
 languages = ['Русский', 'Английский', 'оба']
 ciphers = ['Цезаря', 'Рельсовый', 'Виженера']
 actions = ['Зашифровать', 'Расшифровать']
 
+# Алфавит
 sumb = ',. !"№;%:?*()_-#@$+=0123456789'
 ru = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
 en = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
+# Функция очистки
 def clear():
     l_text_input.delete(0, tk.END)
     l_key_input.delete(0, tk.END)
